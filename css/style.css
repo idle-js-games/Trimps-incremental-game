@@ -7,6 +7,10 @@ body {
 	overflow-y: hidden;
 overflow-x: hidden;
 }
+.spire ul li.spireCell.cellColorNotBeaten{
+	background-color: #928DAD;
+}
+
 .progress-bar {
     -webkit-transition: width .1s ease;
     transition: width .1s ease;
@@ -23,6 +27,85 @@ overflow-x: hidden;
     margin-bottom: 10px;
 }
 
+#talentsContainer, #talentsHere{
+	width: 100%;
+}
+
+.essenceMessage{
+	background-color: black;
+	color: #59b300;
+}
+
+
+.noMarg{
+	margin-left: 0;
+	margin-right: 0;
+}
+
+
+.talentItem{
+	display: inline-block;
+	width: 20%;
+	text-align: center;
+	border: 1px solid white;
+	padding: 2% 0%;
+	cursor: pointer;
+}
+
+#talentsTitle{
+	text-align: center;
+	font-size: 2vw;
+}
+
+#talentsCost{
+	text-align: center;
+	font-size: 1.5vw;
+}
+
+#talentRespecBtn{
+	text-align: center;
+	border: 1px solid white;
+	padding: 0.5vw 0;
+	font-size: 0.95vw;
+}
+
+.talentIcon{
+	font-size: 1.1vw;
+}
+
+.talentIcon .icomoon{
+	font-size: 1.15vw;
+	line-height: 1.15vw;
+}
+
+.talentName{
+	font-size: 0.7vw;
+}
+
+.talentPurchased{
+	background-color: #5cb85c;
+	color: white;
+}
+
+.talentNotPurchased{
+	background-color: black;
+	color: white;
+}
+
+.talentRow{
+	border: 1px solid white;
+}
+
+.talentRowLocked .talentNotPurchased{
+	background-color: grey;
+	color: white;
+}
+
+.talentRowUnlocked .talentNotPurchased.talentReqNeeded{
+	background-color: #d9534f;
+	color: white;
+}
+
 .playerGather {
     font-size: 1.1vw;
     text-align: center;
@@ -34,7 +117,16 @@ overflow-x: hidden;
     color: white;
 }
 
+.GACustomInput{
+	width: 33%;
+	margin: 0 0.15%;
+}
 
+#GATargetError{
+	text-align: center;
+	color: red;
+	font-size: 1.2em;
+}
 
 .holidaySaleDesc{
 	color: red;
@@ -90,6 +182,10 @@ overflow-x: hidden;
 .resourceRow{
 	height: 49.9%;
 	padding-right: .25vw;
+}
+
+.nav > li {
+	cursor: pointer;
 }
 
 #resourceColumn {
@@ -194,7 +290,15 @@ overflow-x: hidden;
 	font-size: .6vw;
 }
 
+#portalTimer{
+	cursor: pointer;
+}
 
+#portalTimer.timerPaused{
+	color: red;
+  animation: blinker 2.5s cubic-bezier(.5, 0, 1, 1) infinite alternate;  
+}
+@keyframes blinker { to { background-color: red; color: white; } }
 
 .lowPad {
 	padding-left: 5px;
@@ -339,6 +443,10 @@ overflow-x: hidden;
 	border-radius: 100%;
 }
 
+#settingsAlert.alert{
+	background-color: #d9534f;
+}
+
 #mapsBtn .alert{
 	background-color: #2E0854;
 	color: #DDDDFF;
@@ -420,6 +528,11 @@ overflow-x: hidden;
 
 #viewChallengeText {
 	font-size: 1.3vw;
+}
+
+#viewChallengeText ul{
+	overflow-y: auto;
+	max-height: 22vw;
 }
 
 .nextChallenge {
@@ -517,6 +630,117 @@ overflow-x: hidden;
     border: 1px solid white;
 }
 
+#GeneticistassistContainer{
+	display: inline-block;
+	width: 48.9%;
+	border: 0;
+	padding: 0;
+	background-color: rgba(0,0,102,1);
+}
+
+#generatorWindow{
+	width: 98.3%;
+}
+
+.generatorStateActive{
+	background-color: #8c0000;
+}
+
+.generatorStatePassive{
+	background-color: #000040;
+}
+
+.generatorStateHybridActive{
+	background: linear-gradient(to right, #318696 14%,#8c0000 55%);
+}
+
+.generatorStateHybridPassive{
+	background: linear-gradient(to right, #318696 14%,#000040 55%);
+}
+
+/* Small Buttons */
+
+#buyHere.buttonSizeSmall div .buyBox .thing{
+	width: 19.5%;
+	font-size: .68vw;
+	margin-left: 0.15%;
+	margin-right: 0.15%;
+}
+
+#buyHere.buttonSizeSmall div .buyBox #GeneticistassistContainer{
+	width: 39.3%;
+}
+
+#buyHere.buttonSizeSmall div .buyBox #generatorWindow{
+	width: 98.7%;
+	font-size: 0.85vw;
+}
+
+/* Tiny Buttons */
+
+#buyHere.buttonSizeTiny div .buyBox .thing{
+	width: 16.4666666%;
+	font-size: .58vw;
+	margin-left: 0.1%;
+	margin-right: 0.1%;
+}
+
+#buyHere.buttonSizeTiny div .buyBox #GeneticistassistContainer{
+	width: 33.1333333%;
+}
+
+#buyHere.buttonSizeTiny div .buyBox #generatorWindow{
+	width: 99.7999996%;
+	font-size: 0.85vw;
+}
+
+
+
+.noBotMarg{
+	margin-bottom: 0;
+}
+
+
+#disableOnUnlockCheck{
+	height: 1vw;
+	width: 1vw;
+	line-height: 1vw;
+	margin: 0;
+}
+
+#GADisableCheck{
+	font-size: 1vw;
+	line-height: 1vw;
+	height: 1vw;
+	width: 100%;
+	margin-top: 0.5vw;
+}
+
+#GeneticistassistContainer div{
+	width: 50% !important;
+	margin: 0 !important; 
+}
+
+#GeneticistassistContainer #Geneticist{
+	border-right: 0;
+}
+
+#GeneticistassistContainer #Geneticistassist{
+	border-left: 0;
+}
+
+#Geneticistassist.stateHappy{
+	background: rgba(0,0,0,0);
+}
+
+#Geneticistassist.stateHiring{
+	background: rgba(0,166,41,0.4);
+}
+
+#Geneticistassist.stateFiring{
+	background: rgba(140,35,0,0.4);
+}
+
 #battleContainer {
     border: 2px solid white;
     background: rgba(121, 121, 123, 0.5);
@@ -603,13 +827,34 @@ overflow-x: hidden;
 	background-color: #5cb85c;
 }
 
+.settingBtntrue:hover, .settingBtn1:hover{
+	background-color: #449d44;
+}
+
 .settingBtnfalse, .settingBtn0{
 	background-color: #d9534f;
+}
+
+.settingBtnfalse:hover, .settingBtn0:hover{
+	background-color: #d43f3a;
 }
 
 .settingBtn2, .btn-yellow{
 	background-color: yellow;
 	color: black;
+}
+
+.settingBtn2:hover, .btn-yellow:hover{
+	background-color: #e6e600;
+	color: black;
+}
+
+.settingBtn3{
+	background-color: #318696;
+}
+
+.settingBtn3:hover{
+	background-color: #287280;
 }
 
 .optionContainer {
@@ -621,15 +866,58 @@ overflow-x: hidden;
 	width: 15.5vw;
 }
 
+#talentsEssenceTotal{
+	line-height: 1em;
+	font-size: 0.8em;
+}
+
+.optionContainer.settingFit12{
+	margin-left: 0.58vw;
+	margin-right: 0.58vw;
+}
+
 .optionItemDescription{
 	padding-left: .5vw;
 	padding-right: .5vw;
 	font-size: 1vw;
 }
 
+#settingTitleBar{
+	text-align: center;
+	padding-top: 1.5vw;
+	margin-bottom: 1.5vw;
+}
+
 #settingsHere{
 	margin-bottom: 2vw;
-	margin-top: 2vw;
+}
+
+#searchSettingsTitle{
+	font-size: 1.5vw;
+	margin: 0 3vw;
+}
+
+#searchSettings{
+	color: black;
+	font-size: 1.5vw;
+	line-height: 1.5vw;
+	width: 30%;
+}
+
+#settingSearchResults{
+	height: 5.2vw;
+}
+
+#settingsTabs{
+	margin-top: 0.75vw;
+}
+
+.settingTypeBtn{
+	font-size: 1.5vw;
+	line-height: 1.5vw;
+	margin-top: 0.4vw;
+	margin-bottom: 0.5vw;
+	margin-right: 0;
 }
 
 #numTabs{
@@ -832,7 +1120,9 @@ overflow-x: hidden;
 }
 
 .battleStatsTitle {
+	overflow: auto;
     font-size: 1.1em;
+	max-height: 1.55em;
 }
 
 .badBadge {
@@ -999,11 +1289,26 @@ overflow-x: hidden;
     color: red;
 }
 
+.battleCell.TrimpmasSnow, .badge.TrimpmasSnow, .badge.CorruptSnow, .badge.HotSnow, .badNameMutation.TrimpmasSnow, .badNameMutation.CorruptSnow, .badNameMutation.HotSnow{
+    color: #0082bc;
+    background: linear-gradient(45deg, rgba(255,255,255,0.8), rgba(189,255,255,0.8));
+}
+
+.battleCell.CorruptSnow{
+    color: #6082bc;
+    background: linear-gradient(45deg, rgba(255,255,255,0.8), rgba(221,175,255,0.8));
+}
+
+.battleCell.HotSnow{
+    color: #b0828c;
+    background: linear-gradient(45deg, rgba(255,255,255,0.8), rgba(253,175,175,0.8));
+}
+
 #portalWrapper{
 	color: black;
 	width: 100vw;
 	height: 100vh;
-	padding: 20px;
+	padding: 0.6%;
 	text-align: center;
 	padding-left: 5vw;
 	padding-right: 5vw;
@@ -1026,10 +1331,11 @@ overflow-x: hidden;
 }
 
 .portalMk5{
-	background: -webkit-repeating-radial-gradient(#01785a 10%, #256e9b 10%, #17394f 10%, #11222e 20%);
-	background: -o-repeating-radial-gradient(#01785a 10%, #256e9b 10%, #17394f 10%, #11222e 20%);
-	background: -moz-repeating-radial-gradient(#01785a 10%, #256e9b 10%, #17394f 10%, #11222e 20%);
-	background: repeating-radial-gradient(#01785a 10%, #256e9b 10%, #17394f 10%, #11222e 20%);
+	background: transparent repeating-radial-gradient(rgba(1,120,90,0.95) 10%, rgba(37,110,155,0.95) 10%, rgba(23,57,79,0.95) 10%, rgba(17,34,46,0.95) 20%)  repeat scroll 0% 0%;
+}
+
+.portalMk6{
+	background: transparent radial-gradient(rgba(0,0,128,0.7), rgba(48,0,97,0.7), rgba(0,0,90,0.7));
 }
 
 .portalMkPreview{
@@ -1045,13 +1351,48 @@ overflow-x: hidden;
  .portalMk5 #portalHelium,
  .portalMk5 #portalTotalHelium,
  .portalMk5 #portalTotalPortals,
- .portalMk5 #challengeTitle{
+ .portalMk5 .challengeTitle{
+  color: white !important;
+}
+
+.portalMk6 #portalStory,
+ .portalMk6 #challengeDescriptionPre,
+ .portalMk6 #challengeName,
+ .portalMk6 #portalTitle,
+ .portalMk6 #portalError,
+ .portalMk6 #portalHelium,
+ .portalMk6 #portalTotalHelium,
+ .portalMk6 #portalTotalPortals,
+ .portalMk6 .challengeTitle{
   color: white !important;
 }
 
 .portalMk5 #flagMustRestart{
 	color: #C55B5B;
 
+}
+
+#titleRow{
+	height: 6.5vw;
+	margin-bottom: 0.5vw;
+}
+
+.titleCol{
+	display: inline-block;
+	width: 35%;
+	padding: 0 1%;
+	position: absolute;
+	top: 0.5vw;
+}
+
+#titleCol1{
+	left: 22%;
+}
+
+#titleCol2{
+	position: absolute;
+	left: 47%;
+	
 }
 
 .perkColorOn{
@@ -1062,8 +1403,24 @@ overflow-x: hidden;
 	background-color: grey;
 }
 
+.perkColorMaxed{
+	background-color: #696980;
+}
+
 .portalThing.detailed{
-	font-size: 0.72vw;
+	font-size: 0.96vw;
+}
+
+.portalThing .thingOwned{
+	font-size: 0.9em;
+}
+
+.portalThing.additive.perkColorOn{
+	background-color: #004010;
+}
+
+.portalThing.additive.perkColorOff{
+	background-color: #809080
 }
 
 #statsWrapper, #achievementWrapper, #heirloomWrapper{
@@ -1086,10 +1443,10 @@ overflow-x: hidden;
 	height: 5.7vw;
 }
 
-#addCarriedBtn{
+#addCarriedBtn, #recycleAllHeirloomsBtn{
 	display: inline-block;
 	width: initial;
-	font-size: 1vw;
+	font-size: 0.9vw;
 	float: right;
 	padding: 0.1vw 0.2vw;
 	margin: 0;
@@ -1154,6 +1511,9 @@ overflow-x: hidden;
 	color: white;
 	font-size: 2vw;
 	line-height: 2vw;
+	text-align: center;
+	width: 2vw;
+	display: inline-block;
 }
 
 .heirloomRare0{
@@ -1213,11 +1573,83 @@ overflow-x: hidden;
 	  0.15vw 0.15vw 0.3vw #2f006d;
 }
 
+.selectedHeirloomItem.heirloomRare6{
+background: -moz-linear-gradient(-45deg,  #000b38 0%, #280021 50%, #000b38 100%); 
+background: -webkit-linear-gradient(-45deg,  #000b38 0%,#280021 50%,#000b38 100%); 
+background: linear-gradient(135deg,  #000b38 0%,#280021 50%,#000b38 100%); 
+}
+
+.selectedHeirloomItem.heirloomRare7{
+background: linear-gradient(135deg,  #000000 0%, #400000 50%, #100000 100%); 
+}
+
 .heirloomRare6 .heirloomMod:hover, .heirloomRare6.rarityBdBox{
 	border: 0.2vw solid #2693ff;
 }
 
 .heirloomRare6 .heirloomMod{
+	background-color: initial;
+}
+
+.heirloomRare7{
+	color: #730000;
+	text-shadow: 
+			1px 1px 2px #ff9326, 
+			0 0 25px #ff4000, 
+			0 0 5px #f37900, 
+			-0.17vw -0.17vw 0.17vw rgba(140,35,0,0.8),  
+			  0.17vw -0.17vw 0.17vw rgba(89,0,0,0.72),
+			 -0.17vw 0.17vw 0.17vw rgba(102,0,0,0.58),
+			  0.17vw 0.17vw 0.3vw rgba(89,0,0,0.72);	
+}
+
+.heirloomRare7.heirloomThing, .heirloomRare7 div .selectedHeirloomIcon{
+	color: #730000;
+	animation: heirRare7Animated 7s infinite;
+}
+
+@keyframes heirRare7Animated{
+	0% {
+		text-shadow: 
+			1px 1px 2px #ff9326, 
+			0 0 25px #ff4000, 
+			0 0 5px #f37900, 
+			-0.17vw -0.17vw 0.17vw rgba(140,35,0,0.8),  
+			  0.17vw -0.17vw 0.17vw rgba(89,0,0,0.72),
+			 -0.17vw 0.17vw 0.17vw rgba(102,0,0,0.58),
+			  0.17vw 0.17vw 0.3vw rgba(89,0,0,0.72);	
+			  animation-timing-function: ease-in;
+	}
+	50% {
+		text-shadow: 
+			1px 1px 8px #ff9326, 
+			0 0 50px #ff4000, 
+			0 0 25px #f37900, 
+			-0.17vw -0.17vw 0.17vw rgba(140,35,0,0.8),  
+			  0.17vw -0.17vw 0.17vw rgba(89,0,0,0.72),
+			 -0.17vw 0.17vw 0.17vw rgba(102,0,0,0.58),
+			  0.17vw 0.17vw 0.3vw rgba(89,0,0,0.72);	
+			  animation-timing-function: ease-out;
+	}
+	100% {
+	text-shadow: 
+			1px 1px 2px #ff9326, 
+			0 0 25px #ff4000, 
+			0 0 5px #f37900, 
+			-0.17vw -0.17vw 0.17vw rgba(140,35,0,0.8),  
+			  0.17vw -0.17vw 0.17vw rgba(89,0,0,0.72),
+			 -0.17vw 0.17vw 0.17vw rgba(102,0,0,0.58),
+			  0.17vw 0.17vw 0.3vw rgba(89,0,0,0.72);	
+	}
+}
+
+
+
+.heirloomRare7 .heirloomMod:hover, .heirloomRare7.rarityBdBox{
+	border: 0.2vw solid #8c0000;
+}
+
+.heirloomRare7 .heirloomMod{
 	background-color: initial;
 }
 
@@ -1339,6 +1771,27 @@ overflow-x: hidden;
 	border: 1px solid white !important;
 }
 
+#logBtnGroup div{
+	width: 24%;
+}
+
+#logConfigBtn{
+	text-align: center;
+}
+
+#logConfigHolder{
+	width: 5% !important;
+}
+
+.corruptedCalcRow{
+	background-color: #2E0854 !important;
+	color: #DDDDFF !important;
+}
+
+.corruptedCalcRow td{
+	border: 1px solid white !important;
+}
+
 .heirloomMod{
 	cursor: pointer;
 	padding: 0.2vw 0.4vw 0.2vw 0.4vw;
@@ -1356,6 +1809,11 @@ overflow-x: hidden;
  -0.15vw 0.15vw 0.2vw #aaa,
  0.15vw 0.15vw 0.2vw #aaa;
 	cursor: pointer;
+}
+
+.spireMetals, .spireMetalsMsg{
+	color: #f2b600;
+	text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 .iconSelected{
@@ -1378,11 +1836,6 @@ overflow-x: hidden;
 	background-color: #111111;
 }
 
-.selectedHeirloomItem.heirloomRare6{
-background: -moz-linear-gradient(-45deg,  #000b38 0%, #280021 50%, #000b38 100%); 
-background: -webkit-linear-gradient(-45deg,  #000b38 0%,#280021 50%,#000b38 100%); 
-background: linear-gradient(135deg,  #000b38 0%,#280021 50%,#000b38 100%); 
-}
 
 
 
@@ -1438,11 +1891,15 @@ background: linear-gradient(135deg,  #000b38 0%,#280021 50%,#000b38 100%);
 }
 
 #achievementsHere{
-	margin-top: 2%;
 	overflow-y:  auto;
 	height: calc(98% - 9.5vw);
 	background: rgba(60, 60, 60, 0.4);
 	text-align: center;
+}
+
+#achievementGoldenBonusContainer{
+	font-size: 0.65em;
+	color: #ffd700;
 }
 
 .littleAchievementWrapper{
@@ -1452,7 +1909,6 @@ background: linear-gradient(135deg,  #000b38 0%,#280021 50%,#000b38 100%);
 }
 
 .achievementContainer{
-	border: 1px solid white;
 	margin: 0.5%;
 	display: inline-block;
 	color: black;
@@ -1460,6 +1916,9 @@ background: linear-gradient(135deg,  #000b38 0%,#280021 50%,#000b38 100%);
 	line-height: 1.45vw;
 	text-align: center;
 	padding-top: 0.15vw;
+	border-style: solid;
+	border-width: 0.1vw;
+	border-left-width: 1vw;
 }
 
 .achievementTitle{
@@ -1468,16 +1927,24 @@ background: linear-gradient(135deg,  #000b38 0%,#280021 50%,#000b38 100%);
 	background-color: white;
 	text-align: center;
 	display: inline-block;
-	font-size: 1.2vw;
+	font-size: 1.1vw;
 	color: black;
-	line-height: 1.6vw;
+	line-height: 1.4vw;
 	display: inline-block;
 	vertical-align: top;
 	margin-top: 0.4vw;
 }
 
+.helium{
+	color: #00bfff;
+}
+
 .doubleTall{
-	line-height: 4.15vw;
+	line-height: 3.75vw;
+}
+
+.tripleTall{
+	line-height: 6.4vw;
 }
 
 #achievementPopup{
@@ -1554,7 +2021,8 @@ background: linear-gradient(135deg,  #000b38 0%,#280021 50%,#000b38 100%);
 }
 
 #achievementTopRow{
-	height: 8.5vw;
+	height: 10vw;
+	overflow: hidden;
 }
 
 #achievementMainButtons{
@@ -1662,7 +2130,22 @@ background: linear-gradient(135deg,  #000b38 0%,#280021 50%,#000b38 100%);
 
 #portalStory{
 	display: inline-block;
-	font-size: 1vw;
+	font-size: 1.25vw;
+}
+
+.dailyTopRow{
+	background-color: black;
+	color: white;
+	padding: 0;
+	margin: 0;
+}
+
+#challengeDescriptionPre{
+	font-size: 1.25vw;
+}
+
+#perkCol, #challengeCol{
+	padding: 0 1%;
 }
 
 .heirloomRecycleWarning{
@@ -1681,8 +2164,9 @@ background: linear-gradient(135deg,  #000b38 0%,#280021 50%,#000b38 100%);
 
 #portalTitle{
 	width: 100%;
-	font-size: 3.5vw;
+	font-size: 3.3vw;
 	text-align: center;
+	margin-top: 0.9vw;
 }
 
 #portalHelium{
@@ -1719,6 +2203,10 @@ background: linear-gradient(135deg,  #000b38 0%,#280021 50%,#000b38 100%);
 	color: #7CFC00;
 }
 
+.greenText{
+	color: green;
+}
+
 .exotic{
 	color: #640169 !important;
 	background: rgba(255, 255, 255, 0.5);
@@ -1749,6 +2237,45 @@ background: linear-gradient(135deg,  #000b38 0%,#280021 50%,#000b38 100%);
 	background-color: #222;
 	display: block;
 	padding: 2%;
+}
+
+.badNameMutation{
+	font-weight: bold;
+	padding: 0px 0.2vw;
+}
+
+/* MUTATIONS HERE */
+
+.badNameMutation.Corruption{
+	background-color: #2f006d;
+	color: white;
+}
+
+.battleCell.Corruption, .badge.Corruption{
+	background-color: #2E0854;
+	color: #DDDDFF;
+}
+
+.battleCell.Magma, .badge.Magma, .badNameMutation.Magma, .message.Magma {
+	background-color: #8c0000;
+	color: #FFDDDD;
+}
+
+.battleCell.Pumpkimp, .badge.Pumpkimp, .badNameMutation.Pumpkimp{
+	background-color: #d96c00;
+	color: white;
+}
+
+.badNameMutation.Pumpkimp{
+	background-color: #a65300;	
+}
+
+#row9 .battleCell.Pumpkimp{
+	background-color: #006600;
+}
+
+.battleCell.mapPumpkimp{
+	background-color: #a65300;	
 }
 
 .easterEgg0{
@@ -1810,16 +2337,20 @@ color: #DDDDFF !important;
 	color: #DDDDFF;
 }
 
-.reducedSizeSec{
-	font-size: 0.9em !important;
+.sizeSecReduced{
+	font-size: 1.1em !important;
 }
 
-#gemsPs .reducedSizeSec, #fragmentsPs .reducedSizeSec{
+#gemsPs .sizeSecReduced, #fragmentsPs .sizeSecReduced{
 	font-size: 0.85em !important;
 }
 
 .planetBreakDescription{
 	font-weight: bold;
+}
+
+.planetBreakDescription b{
+	font-weight: bolder;
 }
 
 .planetBreakDescription .good{
@@ -1843,21 +2374,67 @@ color: #DDDDFF !important;
 .successColor, .colorSuccess{
 	background-color: #5cb85c;
 }
-.dangerColor, .colorDanger{
+.dangerColor, .colorDanger, .stateDanger{
 	background-color: #d9534f;
 }
+
+.autoUpgradeBtn.colorSuccess:hover, .dailyTop.colorSuccess:hover, .colorSuccess.hoverColor:hover {
+	background-color: #449d44;
+}
+
+.autoUpgradeBtn.colorDanger:hover, #talentRespecBtn.colorDanger:hover, .colorDanger.hoverColor:hover {
+	background-color: #d43f3a;
+}
+
+.colorDark{
+	background-color: #0f0f1e;
+	color: #a8a8b7;
+}
+
+.workColorOff{
+	background-color: black;
+}
+
+.workColorTurkimp{
+	background-color: rgba(102,51,0,0.7);
+}
+
+.workColorOn{
+background-color: rgba(255,255,255,0.25);
+	
+}
+
 .infoColor, .colorInfo{
 	background-color: #5bc0de;
 }
+.warningColor, .colorWarning{
+	background-color: yellow;
+	color: black;
+}
+
+.autoUpgradeBtn.colorWarning:hover{
+	background-color: #cccc00;
+}
+
 .primaryColor, .colorPrimary{
 	background-color: #337ab7;
 	color: white;
 }
-.greyColor{
+
+.colorPrimary.hoverColor:hover{
+	background-color: #2d6da3;
+}
+
+.greyColor, .colorGrey{
 	background-color: grey;
 }
-.tealColor{
+.tealColor, .colorTeal{
 	background-color: #318696 !important;
+	color: white;
+}
+
+.tealColor:hover, .colorTeal.hoverColor:hover{
+	background-color: #2b7583 !important;
 	color: white;
 }
 #boneWrapper{
@@ -1900,6 +2477,20 @@ color: #DDDDFF !important;
 
 .bundleBtn{
 	font-size: .8em;
+}
+
+.boneBtnStateOff{
+	background-color: grey;
+	color: white;
+}
+
+.boneBtnStateOn{
+	background-color: #337ab7;
+	color: white;
+}
+
+.boneBtnStateTeal{
+	background-color: #318696;
 }
 
 .kredImg{
@@ -1992,6 +2583,26 @@ color: #DDDDFF !important;
 
 #importBuyDesc{
 	font-size: .9em;
+}
+
+.messageCheckboxHolder input{
+	width: 1vw;
+	height: 1vw;
+	margin: 0;
+}
+
+.messageConfigTitle{
+	font-size: 2vw;
+	font-weight: bold;
+}
+
+.messageNameHolder{
+	font-size: 1.3vw;
+}
+
+#messageConfigMessage{
+	height: 3vw;
+	font-size: 1.2vw;
 }
 
 .thingSmall{
@@ -2097,6 +2708,14 @@ color: #DDDDFF !important;
 	font-size: .8em;
 }
 
+#blockDiv{
+	width: 28.33333333%;
+}
+
+#damageDiv{
+	width: 55%;
+}
+
 #critSpan, #badCrit{
 	font-weight: bold;
 	color: yellow;
@@ -2145,7 +2764,9 @@ color: #DDDDFF !important;
 
 #specificChallengeDescription{
 	min-height: 10vw;
-	margin: 1vw;
+	overflow-y: auto;
+	max-height: 14.3vw;
+	margin: 0.5vw;
 	color: #318696;
 	background-color: #d0d0d0;
 }
@@ -2154,14 +2775,15 @@ color: #DDDDFF !important;
 	margin: 0 1vw;
 }
 
-#challengeTitle{
+.challengeTitle{
 	text-align: center;
-	font-size: 1.1vw;
+	font-size: 1.3vw;
+	font-weight: bold;
 }
 
 #challengeDescription{
 	font-size: 1vw;
-	height: 20vw;
+	height: 22.5vw;
 }
 
 #portalTabs{
@@ -2186,6 +2808,10 @@ color: #DDDDFF !important;
 	color: white;
 	font-size: 1.1vw;
 	width: 19.4%;
+}
+
+#challengeDaily{
+	background-color: #b38600;
 }
 
 #extraGridInfo{
@@ -2268,22 +2894,18 @@ color: #DDDDFF !important;
 }
 
 .btn-new {
-background: -moz-linear-gradient(left,  #000000 0%, #501030 50%, #000000 100%);
-background: -webkit-linear-gradient(left,  #000000 0%,#501030 50%,#000000 100%);
-background: linear-gradient(to right,  #000000 0%,#501030 50%,#000000 100%);
-color: white;
+	color: #ff4000;
+	background: linear-gradient(135deg,  #000000 0%, #400000 50%, #100000 100%); 
 }
+
 .btn-new:hover,
 .btn-new:focus,
 .btn-new.focus,
 .btn-new:active,
 .btn-new.active,
 .open > .dropdown-toggle.btn-new {
-background: -moz-linear-gradient(left,  #000000 0%, #fff 50%, #000000 100%);
-background: -webkit-linear-gradient(left,  #000000 0%,#fff 50%,#000000 100%);
-background: linear-gradient(to right,  #000000 0%,#fff 50%,#000000 100%);
-color: #400030;
-
+	color: #d90000;
+	background: linear-gradient(135deg,  #400000 0%, #100000 50%, #400000 100%); 
 }
 .btn-new:active,
 .btn-new.active,
@@ -2341,6 +2963,20 @@ input::-webkit-inner-spin-button {
 	border: 1px solid white;
 }
 
+.thingColorDone {
+	background: #004000;
+	color: white !important;
+}
+
+.thingColorCtrl {
+	background: radial-gradient(#000066 45%, black 60%);
+}
+
+.thingColorGoldenUpgrade {
+	background: #ffd700;
+	color: black !important;
+}
+
 .thingColorCanAfford {
 	background: black;
 }
@@ -2369,20 +3005,31 @@ input::-webkit-inner-spin-button {
 	background: rgba(255,255,255,0.25);
 }
 
+#NewTab.tabNotSelected {
+	background: rgba(255,255,0,0.5);
+}
+
+#NewTab.tabSelected {
+	background: rgba(64,64,0,0.75);
+}
+
 #buyTabs > ul > .tabSelected a {
 	border-bottom: 0;
 }
 
 .cellColorBeaten{
-	background: green;
+	background: green !important;
+	color: black !important;
 }
 
 .cellColorCurrent {
-	background: yellow;
+	background: yellow !important;
+	color: black !important;
 }
 
 .cellColorOverkill {
-	background: #67cf00;
+	background: #67cf00 !important;
+	color: black !important;
 }
 
 .percentColorBlue {
@@ -2446,3 +3093,273 @@ sup{
 	font-size: 0.9em !important;
 }
 
+.playFabRow div:nth-child(2){
+	border-left: 1px solid black;
+}
+
+#playFabLoginError{
+	color: red;
+	font-size: 1.1em;
+	text-align: center;
+	font-weight: bold;
+}
+
+.inactiveBtn{
+	border: 1px solid black;
+	background-color: #333333;
+	color: white;
+	width: 100%;
+	text-align: center;
+	border-radius: 10px;
+	display: inline-block;
+}
+
+#toggleusePlayFab.settingBtn0{
+	background-color: #00008c;
+}
+
+#toggleusePlayFab.settingBtn0:hover{
+	background-color: #00005a;
+}
+
+#tooltipDiv.tooltipExtraLg{
+	width: 50%;
+}
+
+#playFabLoginInfo{
+	padding-left: 0;
+}
+
+#playFabIndicator{
+	font-size: 1.2em;
+}
+
+.iconStateGood{
+	color: green;
+}
+
+.iconStateBad{
+	color: red;
+}
+
+.statContainer{
+	margin-bottom: 1vh;
+}
+
+.spirePoem {
+	font-style: italic;
+	font-weight: bold;
+	display: block;
+	text-align: center;
+}
+
+.col-xs-3.fifth{
+	width: 20% !important;
+}
+
+#magmiteOwned, #generatorUpgradeTitle{
+	font-size: 1.2em;
+	font-weight: bold;
+	text-align: center;
+	display: inline-block;
+	width: 50%;
+}
+
+#magmiteOwned{
+	color: #8c0000;
+}
+
+#generatorUpgradeTitle{
+	color: #000040;
+}
+
+.generatorUpgradeTitle{
+	text-align: center;
+	font-size: 1.1em;
+	font-weight: bold;
+	padding: 1%;
+}
+
+#magmiteCost, #generatorUpgradeName{
+	text-align: center;
+	font-size: 1.2em;
+	display: inline-block;
+	width: 50%;
+}
+
+#generatorUpgradeName{
+	font-weight: bold;
+}
+
+#magmiteCost.canAfford{
+	color: #80c780; 
+}
+
+#magmiteCost.cantAfford{
+	color: #d9534f;
+}
+
+#generatorUpgradeDescription{
+	background-color: #777777;
+	padding: 0.5%;
+	margin-top: 1%;
+	color: #333333;
+	min-height: 6.8vw;
+}
+
+#generatorNextTick {
+	position: absolute;
+	top: 60%;
+	font-size: 1.5em;
+	color: black;
+		text-shadow:
+	 -1px -1px 0 #FFF,  
+	  1px -1px 0 #FFF,
+	 -1px 1px 0 #FFF,
+	  1px 1px 0 #FFF;
+	  text-align: center;
+	  width: 100%;
+	  left: 0;
+}
+
+#generatorProducingContainer{
+	font-size: 1.1em;
+	padding-top: 10%;
+}
+
+#generatorTickContainer{
+	height: 5vw;
+	width: 5vw;
+	display: inline-block;
+	position: relative;
+	margin-top: 3%;
+}
+
+#fuelContainer{
+	width: 5vw;
+	height: 5vw;
+	display: inline-block;
+	position: relative;
+	border: 1px solid black;
+	margin-top: 3%;
+	transform: rotate(180deg);
+}
+
+#fuelGlass {
+	background: linear-gradient( 45deg, white, lightblue, white, lightblue, white, lightblue );
+	opacity: 0.5;
+	width:100%;
+	height: 100%;
+}
+
+#genTitleContainer{
+	display: inline-block;
+	width: 40%;
+	float: left;
+}
+
+
+#generatorTitle{
+	margin-bottom: 0.25vw;
+	font-size: 1.2em;
+}
+
+#generatorUpgradeBtn{
+	margin-top: 0.5vw;
+	font-size: 1.1em;
+	display: inline-block;
+	width: 70%;
+}
+
+#genGaugeContainer{
+	background: rgba(0, 0, 0, 0.2);
+	padding-right: 0;
+	display: inline-block;
+	width: 60%;
+	float: right;
+}
+
+#genGaugeContainer .row{
+	margin: 0;
+}
+
+#fuelBar{
+	background-color: #b6a800;
+	position: absolute;
+	height: 100%;
+	top: 0%;
+	width: 100%;
+	transition: height 0.5s ease-out;
+}
+
+#fuelStorageBar{
+	background-color: #8c4600;
+	position: absolute;
+	height: 100%;
+	top: 0%;
+	width: 100%;
+	transition: height 0.5s ease-out;
+}
+
+#fuelOwnedText{
+	position: absolute;
+	width: 100%;
+	left: 0;
+	top: 25%;
+	color: black;
+	transform: rotate(180deg);
+}
+
+#overclockerTargetTime{
+	text-align: center;
+	font-size: 1.3em;
+	padding: 0.5%;
+}
+
+.overclockerBtn{
+	width: 25%;
+	display: inline-block;
+	color: white;
+}
+
+.radial-progress {
+	background-color: #919191;
+	border: 1px solid black;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	position: relative;
+}
+
+.radial-progress  .radial-progress-circle {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+}
+
+.radial-progress   .radial-progress-arrow {
+	position: absolute;
+	left: 45%;
+	width: 10%;
+	height: 50%;
+}
+
+.radial-progress   .radial-progress-arrow.mobile {
+	background-color: #000;
+}
+
+.radial-progress   .radial-progress-arrow.static {
+	background-color: #515151;
+	border: 1px solid black;
+}
+
+.radial-progress .radial-progress-knob {
+	position:absolute;
+	top: 45%;
+	left: 45%;
+	width: 10%;
+	height: 10%;
+	border-radius: 50%;
+	border: 1px solid black;
+}
