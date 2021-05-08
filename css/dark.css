@@ -15,16 +15,15 @@
 #battleSideTitle {
     border: 1px solid #212121
 }
+
 .battleCell {
     border: 1px solid #000;
-    margin-left: -1px;
-    margin-top: -1px;
-    color: #000;
-    
+    color: #000;  
 }
+
 #grid,
 #mapGrid {
-    background-color: #000;
+    background: #5D5D5D;
 }
 
 .cellColorOverkill {
@@ -40,6 +39,20 @@
     background-color:#574800;
 }
 
+#fluffyBox {
+    border: none;
+    color: #b72cb7;
+    background-color: #2b112b;
+}
+
+.fluffyIcon {
+    text-shadow: -1px -1px 0 #b72cb7, 1px -1px 0 #b72cb7, -1px 1px 0 #b72cb7, 1px 1px 0 #b72cb7;
+}
+
+.red {
+    color: #AD2A2A;
+}
+
 .talentItem {
     border-color: #5d5d5d;
 	    margin-left: -1px;
@@ -48,7 +61,7 @@
     margin-right: 0px;
 }
 
-.battleCell.TrimpmasSnow, .badge.TrimpmasSnow, .badge.CorruptSnow, .badge.HotSnow, .badNameMutation.TrimpmasSnow, .badNameMutation.CorruptSnow, .badNameMutation.HotSnow{
+.battleCell.TrimpmasSnow, .badge.TrimpmasSnow, .badge.CorruptSnow, .badge.HotSnow, .badNameMutation.TrimpmasSnow, .badNameMutation.CorruptSnow, .badNameMutation.HotSnow, .badNameMutation.Healthy{
     color: #003a54;
     background: linear-gradient(45deg, rgba(255, 255, 255, 0.6), rgba(189, 255, 255, 0.6));
 }
@@ -56,6 +69,11 @@
 .battleCell.CorruptSnow {
     color: #2E0854;
    background: linear-gradient(45deg, rgba(255, 255, 255, 0.6), rgba(221, 175, 255, 0.6));
+}
+
+.battleCell.HealthySnow{
+    color: #313D36;
+    background: linear-gradient(45deg, rgba(255,255,255,0.8), rgba(214, 214, 175, 0.6));
 }
 
 .battleCell.HotSnow {
@@ -80,7 +98,7 @@
 }
 
 .talentItem {
-    width: calc(20% + 1px);
+    width: calc(16.666666667% + 1px);
 }
 
 #battleContainer {
@@ -192,7 +210,7 @@
 #miscColumn {
     padding-left: 0px;
 	margin-left: -2px;
-    padding-right: calc(0.5vw - 2px);
+    padding-right: calc(0.75vw - 2px);
 }
 #buyCol {
    padding-right: 0.5vw;   
@@ -245,6 +263,11 @@
     margin-top: -1px;
     width: calc(25% + 1px);
     border-color: #5D5D5D;
+}
+
+.thing5 {
+	width: 20%;
+	margin-left: 0;
 }
 
 #generatorWindow{
@@ -397,7 +420,7 @@
 	color: black !important;
 }
 
-.cellColorNotBeaten, .postSpire ul li.cellColorNotBeaten {
+.postSpire ul li.cellColorNotBeaten {
 	background: #5D5D5D;
 }
 
@@ -417,7 +440,7 @@
 	background-color: #318696 !important;
 }
 
-#buyTabsUl > li > a {
+.buyTabsUl > li > a {
 	border: 1px solid #212121;
 	border-bottom: 1px solid rgb(221, 221, 221);
 }
@@ -545,6 +568,7 @@ input, button, select, textarea{
 .miscDesc,
 .table-striped > tbody > tr:nth-of-type(2n+1),
 #tooltipDiv,
+#tooltipDiv2,
 .progress {
 	background-color: #202020;
 }
@@ -590,7 +614,7 @@ input, button, select, textarea{
  color: #fff;
 }
 
-#tooltipDiv {
+#tooltipDiv, #tooltipDiv2 {
 	border-color: #002B3B;
 }
 
@@ -600,6 +624,10 @@ input, button, select, textarea{
 
 #animationDiv{
 	background-color: #002B3B;
+}
+
+.advSelect {
+    color: #C8C8C8;
 }
 
 #grid,
@@ -613,6 +641,7 @@ input, button, select, textarea{
 .settingBtn2,
 #boneWrapper,
 #tooltipDiv,
+#tooltipDiv2,
 input, button, select, textarea,
 #trimpsTimeToFill,
 #foodTimeToFill,
@@ -625,7 +654,7 @@ input, button, select, textarea,
 .badge,
 .dmgColorWhite,
 .formationBtn,
-#buyTabsUl > li > a,
+.buyTabsUl > li > a,
 #numTabs > ul > li > a,
 .queueItem,
 .tealColor,
@@ -689,7 +718,7 @@ input, button, select, textarea,
 	background-color: #202020;
 }
 
-.psColorOrange {
+.psColorOrange, .attackColorOrange, .hePhColorOrange {
 	color: #B9B416;
 }
 
@@ -767,13 +796,6 @@ color:#8F8F00
  box-shadow: 1px 1px 0 0 #C8C8C8 inset;
 }
 
-.cBorderOn{
-	border: 0;
-	-webkit-box-shadow: 0px 0px 0.5vw 0.3vw #F00 inset;
-	   -moz-box-shadow: 0px 0px 0.5vw 0.3vw #F00 inset;
-            box-shadow: 0px 0px 0.5vw 0.3vw #F00 inset;
-}
-
 .challengeThing {
 	margin-left:0px;
 	margin-top: 0px;
@@ -781,9 +803,43 @@ color:#8F8F00
 	color:#C8C8C8;
 	background-color: #283d44;
 }
+.challengeThing:hover {
+	background-color: #233237;
+}
+
+.challengeRepeatable{
+	background-color: #337ab7;
+	color: white;
+}
+
+.challengeRepeatable:hover{
+	background-color: #285f8f;
+}
 
 .finishedChallenge{
 	background-color:#5D5D5D
+}
+
+.finishedChallenge:hover { 
+	background-color: #515151;
+}
+
+.thingColorSquared {
+    background-color: #800080 !important;
+    color: inherit;
+}
+
+.thingColorSquared:hover {
+    background-color: #6e006e !important;
+    color: inherit;
+}
+
+#challengeDaily {
+    background-color: #936e00;
+}
+
+#challengeDaily:hover {
+    background-color: #7f5f00;
 }
 
 .alert{
@@ -964,4 +1020,104 @@ color:#8F8F00
 #magmiteOwned {
     color: #b40000;
     text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+.redText{
+	color: #AD2A2A !important;
+}
+
+.liquid ul li {
+    background: #574800;
+}
+
+.LiquimpMessage {
+    background-color: rgba(90, 90, 223, 0.42) !important;
+}
+
+.battleCell.cellColorNotBeaten.Living, .battleCell.cellColorBeaten.Living, .badge.Living, .badNameMutation.Living{
+	background-color: black !important;
+	color: white !important;
+}
+
+.badNameMutation.Healthy, .badge.Healthy, .battleCell.Healthy, .message.Healthy{
+	background: initial;
+	background-color: #3D2C15;
+	color: white;
+}
+
+.badNameMutation.Corruption{
+	background: initial;
+	background-color: #2f006d;
+	color: white;
+}
+
+.battleCell.Corruption, .badge.Corruption{
+	background: initial;
+	background-color: #2E0854;
+	color: #DDDDFF;
+}
+
+.battleCell.Magma, .badge.Magma, .badNameMutation.Magma, .message.Magma {
+	background: initial;
+	background-color: #8c0000;
+	color: #FFDDDD;
+}
+
+.permGenUpgrade {
+	width: calc(33.33333333% + 1px);
+}
+
+#lootBdBtn{
+	color: #1e4c74;
+	text-shadow:
+	-1px -1px 0 #b8b8b8,  
+		1px -1px 0 #969696,
+	-1px 1px 0 #969696,
+		1px 1px 0 #969696;
+	font-size: 1.6vw;
+}
+
+#lootBdBtn:hover{
+	color: #173753;
+	text-shadow:
+	-1px -1px 0 #969696,  
+		1px -1px 0 #969696,
+	-1px 1px 0 #969696,
+		1px 1px 0 #969696;
+}
+
+#playerSpireSpirePanel{
+	border: 2px solid #c8c8c8;
+}
+
+#playerSpireInfoPanel{
+	color: #c8c8c8;
+}
+
+#playerSpireSmallPanel{
+	color: #c8c8c8;
+}
+
+.playerSpireCell{
+	border: 1px solid #c8c8c8;
+}
+
+.playerSpireEnemy{
+	color: #c8c8c8;
+}
+
+.spireTrapBox{
+	border: 2px solid #c8c8c8;
+}
+
+.spireTrapBoxSmall{
+	border: 2px solid #c8c8c8;
+}
+
+#playerSpireTab a{
+	background-color: #5a4603;
+}
+
+#energyShield {
+    background: linear-gradient(0deg, rgb(84, 41, 202) 0%, rgba(0,0,0,0) 30%, rgba(0,0,0,0) 50%, rgba(0,0,0,0) 70%, rgb(84, 41, 202) 100%);
 }
